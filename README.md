@@ -15,25 +15,35 @@
 
 **可惜没有！**
 
-    常见的语言如lua, js, vbs, Python, PowerShell 都或多或少存在一些问题。PowerShell 语法过于诡异，更接近于一种增强版的批处理脚本。Js/vbs/lua 使用方便，但原生功能较弱。Python拥有强大的第三方库，但打包部署麻烦。
+    常见的语言如lua, js, vbs, Python, PowerShell 都或多或少存在一些问题。PowerShell 语法过于诡异，
+    
+    更接近于一种增强版的批处理脚本。Js/vbs/lua 使用方便，但原生功能较弱。Python拥有强大的第三方库，但打包部署麻烦。
     
     于是，才有了大千世界、芸芸众生，各种语言的各领风骚。
 
 
 ## 言归正传。
 
-    笔者在开发过程中各种语言均有接触（当然更亲赖Python和Lua，毕竟作为嵌入式脚本非常合适）。经常摆在面前的问题是，某语言在特定平台上需要直接调用系统API才能实现某些功能的问题。
+    笔者在开发过程中各种语言均有接触（当然更亲赖Python和Lua，毕竟作为嵌入式脚本非常合适）。经常摆在面前的问题是，
     
-    当然，各种语言都有提供一些外部函数扩展（FFI）的方式。通常是需要自己编写一个模块(DLL)或者额外的脚本，难免有点愚拙。所以此处只考虑一种无须额外写太多第三方库，实现统一调用任意系统API的机制。
+    某语言在特定平台上需要直接调用系统API才能实现某些功能的问题。
+    
+    当然，各种语言都有提供一些外部函数扩展（FFI）的方式。通常是需要自己编写一个模块(DLL)或者额外的脚本，难免有点愚拙。
+    
+    所以此处只考虑一种无须额外写太多第三方库，实现统一调用任意系统API的机制。
     
 **目前主要流行的语言中，已有一些FFI支持库：**
 
 
 ![Pandao editor.md](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png "Pandao editor.md")
 
-    各种扩展库语法差异极大，并且有些需要带上庞大数量的支持库，有些功能又极为简略，不能适应较为复杂的函数调用（典型的如EnumWindows类带回调的，以及匿名函数、变参数目等的调用）。
+    各种扩展库语法差异极大，并且有些需要带上庞大数量的支持库，有些功能又极为简略，不能适应较为复杂的函数调用
+    
+    （典型的如EnumWindows类带回调的，以及匿名函数、变参数目等的调用）。
 
-    因此，笔者开发的win32exts扩展框架旨在谋求一种**发布简单的**(一个模块)，**统一的**(各种脚本中语法基本一致)，**高效的**、**功能强大**的(原生API,COM,C++非COM接口成员均支持)模式。
+    因此，笔者开发的win32exts扩展框架旨在谋求一种**发布简单的**(一个模块)，**统一的**(各种脚本中语法基本一致)，
+    
+    **高效的**、**功能强大**的(原生API,COM,C++非COM接口成员均支持)模式。
 
 **一句话，有了 win32exts，真正实现 Do whatever you want，放之四海而皆准是也。**
 
@@ -128,10 +138,13 @@ win32exts.callback（）用于包装一个Python回调函数。
 
 
 
-# 实在编不下去了（←___←b'），下面把win32exts提供统一调用接口清单列一下, 至于典型用法请参考git上的 win32exts_for_Xxxx 仓库的demo 示例。
+# 实在编不下去了（←___←b'），下面是 win32exts 提供的接口分类清单, 至于典型用法请参考git上的 win32exts_for_Xxxx 仓库的demo 示例。
 
 ![win32exts](https://github.com/tankaishuai/win32exts_for_Python/blob/master/API/b1.jpg)
 ![win32exts](https://github.com/tankaishuai/win32exts_for_Python/blob/master/API/b2.jpg)
+
+当然，也可以通过 VS的对象查看器 或者 Python 的 win32exts.help() 命令查看详细API信息：
+
 ![win32exts](https://github.com/tankaishuai/win32exts_for_Python/blob/master/API/a1.jpg)
 ![win32exts](https://github.com/tankaishuai/win32exts_for_Python/blob/master/API/a2.jpg)
 ![win32exts](https://github.com/tankaishuai/win32exts_for_Python/blob/master/API/a3.jpg)
