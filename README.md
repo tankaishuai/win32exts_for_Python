@@ -56,15 +56,15 @@
 
 导入模块符号。第一个参数为待加载的模块名，可以带路径，传入"*"表示当前进程的所有模块；
 
-第二个参数表示函数符号名称，传入"*"表示该模块的所有符号。
+第二个参数表示函数符号名称，传入"\*"表示该模块的所有符号。
 
-win32exts.load_sym("*", "*")
+win32exts.load_sym("\*", "\*")
 
 或 win32exts.load_sym("C:\\windows\\system32\\user32.dll", "MessageBoxW")
 
 或 win32exts.load_sym("user32", "MessageBoxA")
 
-或 win32exts.load_sym("user32", "*")
+或 win32exts.load_sym("user32", "\*")
 
 win32exts.MessageBoxA(0, "call MessageBoxA", "", 1)
 
