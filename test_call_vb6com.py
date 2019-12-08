@@ -1,4 +1,4 @@
-
+ï»¿
 import win32exts
 
 win32exts.load_sym("*", "*")
@@ -9,17 +9,17 @@ print win32exts.co_list_sym(ax)
 
 
 
-# Í¨³£ÒÔ´«Öµ·½Ê½µ÷ÓÃ£¬µ«ÎŞ·¨»ñÈ¡ĞŞ¸ÄºóµÄ²ÎÊı½á¹û
+# é€šå¸¸ä»¥ä¼ å€¼æ–¹å¼è°ƒç”¨ï¼Œä½†æ— æ³•è·å–ä¿®æ”¹åçš„å‚æ•°ç»“æœ
 print win32exts.va_invoke(ax, "up_str", "e", "abcd")
 
 
 
-# up_str() µÚ2¸ö²ÎÊı ÒÔÒıÓÃ·½Ê½µ÷ÓÃ
+# up_str() ç¬¬2ä¸ªå‚æ•° ä»¥å¼•ç”¨æ–¹å¼è°ƒç”¨
 win32exts.co_push_start()
 win32exts.push_bstr("e")
 win32exts.push_bstr("abcd")
-i = win32exts.co_convert_by_ref()     #ÉùÃ÷¸Ã²ÎÊıÒÔÒıÓÃ·½Ê½µ÷ÓÃ
+i = win32exts.co_convert_by_ref()     #å£°æ˜è¯¥å‚æ•°ä»¥å¼•ç”¨æ–¹å¼è°ƒç”¨
 print win32exts.co_invoke(ax, "up_str")
 
-# »ñÈ¡ĞŞ¸Ä¹ıµÄ²ÎÊıÖµ
+# è·å–ä¿®æ”¹è¿‡çš„å‚æ•°å€¼
 print win32exts.co_get_by_ref(i)
