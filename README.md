@@ -1,5 +1,53 @@
+# Win32Exts.pyd 功能清单：
 
-更新：ver 36.2019.12.7
+1、支持 Lua, VBS, JavaScript, Python, Java 任意调用 Win32 API 以及其它第三方DLL扩展
+
+2、方便的各种网络请求、下载库支持, 集成 libcurl 网络库功能
+
+3、集成 sqlite, access, WMI 等数据库，使用统一接口访问，并自带方便的 shell； 支持内存数据库并可 duplicate buffer， 支持内存虚拟文件系统
+
+4、集成各种实用的模块注入接口，以及 API hook 接口，以及模块隐藏等 Spy 能力
+
+5、集成反汇编能力
+
+6、支持解释其它 类 C/uBASIC 语言
+
+7、集成 zlib 等压缩解压缩库
+
+8、集成 crc32, md4, md5， sha-1, rc4 等哈希库算法
+
+9、集成各种浏览器(如：webkit, miniblink, cef, IE) 功能， 并支持 js 脚本中直接使用 ActiveX 控件
+
+10、扩展各种正则表达式库
+
+11、实现 WinDbg, ExStudPE, CefViewPlugin, libcef, VisualDbViewer, x64dbg 等插件接口
+
+12、集成屏幕抓图功能
+
+13、集成方便的自动化 dump分析功能
+
+14、支持屏幕取点取色
+
+15、集成 Dll2Hpp 标识符反修饰功能
+
+16、集成CheckFileHandle 文件解锁工具功能
+
+17、集成 base64 编码解码库
+
+18、集成虚拟机
+
+19、支持32位调用 64 代码
+
+20、集成 cJSON json 库
+
+21、实现 Win XP ~ Win10 下 shell32.dll 模块全部接口
+
+22、集成 eval32 for MatLab 功能
+
+
+======================================
+
+更新：
 
 1）增加 va_get, va_put, va_invoke 等更方便的COM调用方式
 
