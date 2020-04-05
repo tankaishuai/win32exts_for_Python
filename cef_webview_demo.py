@@ -1,4 +1,7 @@
-﻿
+﻿__author__ = 'tks'
+# -*- coding: utf-8 -*-
+#!/usr/local/bin/python3
+
 #初始化加载库
 import win32exts
 win32exts.load_sym("*", "*")
