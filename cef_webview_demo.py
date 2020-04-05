@@ -40,8 +40,8 @@ def OnDocumentReady():
     #页面已经加载完成，下面我们演示调用一下js脚本：eval("alert(...)") 弹一个框
     pfnCallback = None
     dwTimeout = 0
-    #注意 cef_webview_execA() 为变参数目函数，最后要以一个 None 结尾表示参数结束！
-    win32exts.cef_webview_execA(cef, "eval", pfnCallback, dwTimeout, "alert(\"test-Javascript!\")", None)
+    #注意 cef_webview_execA() 为变参数目函数
+    win32exts.cef_webview_execA(cef, "eval", pfnCallback, dwTimeout, "alert(\"test-Javascript!\")" )
     pass
 
 def OnLoadingFailed(url, desc):
