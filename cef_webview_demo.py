@@ -24,7 +24,8 @@ def OnViewCreated():
     ret = win32exts.cef_webview_show(cef, True)
 
     #加载url
-    ret = win32exts.cef_webview_load_urlA(cef, "D:\\src\\temp_src\\win32exts_for_Python\\cef_webview_demo.html")
+    #----------D:\\src\\temp_src\\win32exts_for_Python\\cef_webview_demo.html
+    ret = win32exts.cef_webview_load_urlA(cef, "www.qq.com")
     
     #获取cef根窗口
     root_wnd = win32exts.cef_webview_get_attr_intA(cef, "root_window")
@@ -41,6 +42,7 @@ def OnDocumentReady():
     pfnCallback = None
     dwTimeout = 0
     #注意 cef_webview_execA() 为变参数目函数
+    print("1")
     win32exts.cef_webview_execA(cef, "eval", pfnCallback, dwTimeout, "alert(\"test-Javascript!\")" )
     pass
 
@@ -113,6 +115,7 @@ def OnWebViewEvent(args):
     return "0, 0"
 
 
+
 #消息循环初始化函数
 def Main(args):
     #cef初始化，指定事件通知函数
@@ -122,6 +125,10 @@ def Main(args):
     return "0, 4"
 
 
+
+Main(0)
+
+
 #进入消息循环，指定初始化函数
-win32exts.cef_webview_message_loop(win32exts.callback("Main"))
+win32exts.cef_webview_message_loop()
 
