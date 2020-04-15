@@ -44,6 +44,10 @@
 
 22、集成 eval32 for MatLab 功能
 
+23、支持 IE/Trident 内核浏览器沙箱 --use_sandbox
+
+24、支持 API_Monitor 抓取进程API调用轨迹
+
 
 ======================================
 
