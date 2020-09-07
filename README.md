@@ -4,7 +4,9 @@
 
 2、方便的各种网络请求、下载库支持, 集成 libcurl 网络库功能
 
-3、集成 Firebird, Mysql, sqlite, access, WMI 等数据库，使用统一接口访问，并自带方便的 shell； 支持内存数据库并可 duplicate buffer， 支持内存虚拟文件系统
+3、集成 Firebird, Mysql, sqlite, access, WMI 等数据库，使用统一接口访问，并自带方便的 shell； 
+
+   支持内存数据库并可 duplicate buffer， 支持内存虚拟文件系统
 
 4、集成各种实用的模块注入接口，以及 API hook 接口，以及模块隐藏等 Spy 能力
 
@@ -49,6 +51,10 @@
 24、支持 API_Monitor 抓取进程API调用轨迹
 
 25、支持捕获 Chromium 内核的浏览器加载网页通知
+
+26、支持 读、写 html、xml、json、ini、txt 等格式配置文件，并实现它们之间的相互转化
+
+27、支持 缓存 lua 变量至磁盘，并且重新从磁盘加载至内存变量中
 
 
 ======================================
@@ -201,7 +207,7 @@ win32exts.callback（）用于包装一个Python回调函数。
 
 
 
-# 实在编不下去了（←___←b'），下面是 win32exts 提供的接口分类清单, 至于典型用法请参考git上的 win32exts_for_Xxxx 仓库的demo 示例。
+# （←___←b'），下面是 win32exts 提供的接口分类清单, 至于典型用法请参考git上的 win32exts_for_Xxxx 仓库的demo 示例。
 
 ![win32exts](https://github.com/tankaishuai/win32exts_for_Python/blob/master/API/b1.jpg)
 ![win32exts](https://github.com/tankaishuai/win32exts_for_Python/blob/master/API/b2.jpg)
