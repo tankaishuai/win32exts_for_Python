@@ -1,75 +1,3 @@
-# Win32Exts.pyd 功能清单：
-
-1、支持 Lua, VBS, JavaScript, Python, Java 任意调用 Win32 API 以及其它第三方DLL扩展
-
-2、方便的各种网络请求、下载库支持, 集成 libcurl 网络库功能
-
-3、集成 Firebird, Mysql, sqlite, access, WMI 等数据库，使用统一接口访问，并自带方便的 shell； 
-
-   支持内存数据库并可 duplicate buffer， 支持内存虚拟文件系统
-
-4、集成各种实用的模块注入接口，以及 API hook 接口，以及模块隐藏等 Spy 能力
-
-5、集成反汇编能力
-
-6、支持解释其它 类 C/uBASIC 语言
-
-7、集成 zlib 等压缩解压缩库
-
-8、集成 crc32, md4, md5， sha-1, rc4 等哈希库算法
-
-9、集成各种浏览器(如：webkit, miniblink, cef, IE) 功能， 并支持 js 脚本中直接使用 ActiveX 控件
-
-10、扩展各种正则表达式库
-
-11、实现 WinDbg, ExStudPE, CefViewPlugin, libcef, VisualDbViewer, x64dbg 等插件接口
-
-12、集成屏幕抓图功能
-
-13、集成方便的自动化 dump分析功能
-
-14、支持屏幕取点取色
-
-15、集成 Dll2Hpp 标识符反修饰功能
-
-16、集成CheckFileHandle 文件解锁工具功能
-
-17、集成 base64 编码解码库
-
-18、集成虚拟机
-
-19、支持32位调用 64 代码
-
-20、集成 cJSON json 库
-
-21、实现 Win XP ~ Win10 下 shell32.dll 模块全部接口
-
-22、集成 eval32 for MatLab 功能
-
-23、支持 IE/Trident 内核浏览器沙箱 --use_sandbox
-
-24、支持 API_Monitor 抓取进程API调用轨迹
-
-25、支持捕获 Chromium 内核的浏览器加载网页通知
-
-26、支持 读、写 html、xml、json、ini、txt 等格式配置文件，并实现它们之间的相互转化
-
-27、支持 缓存 lua 变量至磁盘，并且重新从磁盘加载至内存变量中
-
-
-注：本插件不再支持 Win XP 系统。
-
-
-======================================
-
-更新：
-
-1）增加 va_get, va_put, va_invoke 等更方便的COM调用方式
-
-2）增加 co_convert_by_ref, co_get_by_ref 以支持以引用方式调用 COM 接口
-
-3）其他一些性能优化
-
 
 ======================================
 
@@ -210,7 +138,7 @@ win32exts.callback（）用于包装一个Python回调函数。
 
 
 
-# （←___←b'），下面是 win32exts 提供的接口分类清单, 至于典型用法请参考git上的 win32exts_for_Xxxx 仓库的demo 示例。
+# 实在编不下去了（←___←b'），下面是 win32exts 提供的接口分类清单, 至于典型用法请参考git上的 win32exts_for_Xxxx 仓库的demo 示例。
 
 ![win32exts](https://github.com/tankaishuai/win32exts_for_Python/blob/master/API/b1.jpg)
 ![win32exts](https://github.com/tankaishuai/win32exts_for_Python/blob/master/API/b2.jpg)
